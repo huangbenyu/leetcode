@@ -12,7 +12,7 @@ class Solution:
             consult = num
             while consult> 0:
                 consult, remainder = divmod(consult, 10)
-                if  remainder == 0 or consult % remainder != 0:
+                if  remainder == 0 or num % remainder != 0:
                     flag = False
                     break
             if flag:
@@ -29,3 +29,14 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+"""
+    Alternate implementation of self_dividing:
+        def self_dividing(n):
+            x = n
+            while x > 0:
+                x, d = divmod(x, 10)
+                if d == 0 or n % d > 0:
+                    return False
+            return True
+"""
