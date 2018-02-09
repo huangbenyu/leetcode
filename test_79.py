@@ -21,13 +21,13 @@ class Solution:
             return True
         if not self.isequal(board,word[0],i,j):
             return False
-        tmp =board[i][j]
+        tmp = board[i][j]
         board[i][j]= "#"
         ret = self.search_word(board,word[1:],i-1,j) or self.search_word(board,word[1:],i+1,j)\
         or self.search_word(board,word[1:],i,j-1) or self.search_word(board,word[1:],i,j+1)
-        w = word[0]
+       
 
-        board[i][j]=tmp
+        board[i][j] = tmp
         return ret
 
     def isequal (self, board, ch , i,j):
